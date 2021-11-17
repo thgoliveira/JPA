@@ -4,13 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
 import java.util.List;
 
 import lombok.Data;
@@ -25,9 +21,9 @@ public class Professor {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = Professor.ID_SEQUENCE)
     @SequenceGenerator(name = Professor.ID_SEQUENCE, sequenceName = Professor.ID_SEQUENCE, allocationSize = 1)
-    private String cpf;
+    private Long cpf;
 
-    private String rg;
+    private Long rg;
     private String nome;
     private String endereco;
     private String telefone1;

@@ -17,13 +17,13 @@ import lombok.Data;
 @Data
 @Entity
 @Table
-public class Cursos {
+public class Curso {
 
     public final static String ID_SEQUENCE = "SQ_CURSOS_ID";
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = Cursos.ID_SEQUENCE)
-    @SequenceGenerator(name = Cursos.ID_SEQUENCE, sequenceName = Cursos.ID_SEQUENCE, allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = Curso.ID_SEQUENCE)
+    @SequenceGenerator(name = Curso.ID_SEQUENCE, sequenceName = Curso.ID_SEQUENCE, allocationSize = 1)
     private Long id;
 
     private String nome;
