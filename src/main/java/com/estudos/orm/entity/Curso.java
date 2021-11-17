@@ -29,7 +29,7 @@ public class Curso {
     private String nome;
     private String duracao;
 
-    @OneToMany(mappedBy = "cursos")
+    @OneToMany(mappedBy = "curso")
     private List<Materia> materia;
 
     @ManyToOne

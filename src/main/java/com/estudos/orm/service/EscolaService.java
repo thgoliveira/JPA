@@ -13,7 +13,11 @@ public class EscolaService {
         this.repository = repository;
     }
 
-    public void processSchool(Escola escola) {
+    public final void processSchool(Escola escola) {
         repository.save(escola);
+    }
+
+    public final Iterable<Escola> getAll() {
+        return repository.findAll();
     }
 }
